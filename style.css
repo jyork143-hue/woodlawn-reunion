@@ -3,15 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Syne:wght@700;800&display=swap');
 
 :root {
-    /* Color Palette */
+    /* Color Palette - Woodlawn Warriors Schema */
+    --warrior-red: hsl(0, 85%, 45%);
+    --warrior-red-glow: hsla(0, 85%, 45%, 0.5);
+    --warrior-gold: hsl(45, 100%, 50%);
+    --warrior-gold-glow: hsla(45, 100%, 50%, 0.5);
     --razr-silver: hsl(210, 5%, 85%);
     --razr-silver-glass: hsla(210, 5%, 85%, 0.1);
     --carbon-black: hsl(210, 10%, 5%);
     --carbon-black-glass: hsla(210, 10%, 5%, 0.8);
-    --q92-orange: hsl(25, 100%, 50%);
-    --q92-orange-glow: hsla(25, 100%, 50%, 0.5);
-    --sidekick-blue: hsl(190, 100%, 45%);
-    --sidekick-blue-glow: hsla(190, 100%, 45%, 0.5);
     
     /* Typography */
     --font-main: 'Outfit', sans-serif;
@@ -92,11 +92,11 @@ h1, h2, h3 {
 }
 
 .hero-tagline {
-    color: var(--q92-orange);
+    color: var(--warrior-red);
     font-weight: 700;
     letter-spacing: 0.2em;
     margin-bottom: var(--space-s);
-    text-shadow: 0 0 10px var(--q92-orange-glow);
+    text-shadow: 0 0 10px var(--warrior-red-glow);
 }
 
 .hero-title {
@@ -117,18 +117,18 @@ h1, h2, h3 {
 .cta-button {
     display: inline-block;
     padding: 1rem 3rem;
-    background: var(--q92-orange);
+    background: var(--warrior-red);
     color: white;
     text-decoration: none;
     font-weight: 800;
     border-radius: 50px;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-    box-shadow: 0 0 20px var(--q92-orange-glow);
+    box-shadow: 0 0 20px var(--warrior-red-glow);
 }
 
 .cta-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 40px var(--q92-orange-glow);
+    box-shadow: 0 0 40px var(--warrior-red-glow);
 }
 
 /* Experience Zones */
@@ -196,15 +196,15 @@ h1, h2, h3 {
 }
 
 .ticket-card.featured {
-    border-color: var(--sidekick-blue);
-    background: linear-gradient(135deg, rgba(0, 242, 255, 0.05), transparent);
+    border-color: var(--warrior-gold);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), transparent);
 }
 
 .ticket-price {
     font-size: 3.5rem;
     font-weight: 900;
     margin: var(--space-s) 0;
-    color: var(--sidekick-blue);
+    color: var(--warrior-gold);
 }
 
 /* Vendor Section */
@@ -225,12 +225,12 @@ h1, h2, h3 {
     right: var(--space-m);
     width: 64px;
     height: 64px;
-    background: var(--sidekick-blue);
+    background: var(--warrior-gold);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 30px var(--sidekick-blue-glow);
+    box-shadow: 0 10px 30px var(--warrior-gold-glow);
     cursor: pointer;
     z-index: 100;
 }
