@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Deposit | Woodlawn 2006</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+    <!-- Navigation -->
+    <nav style="padding: var(--space-m); text-align: center;">
+        <a href="index.html" style="color: var(--razr-silver); text-decoration: none; font-weight: 700;">&larr; BACK TO MAIN</a>
+    </nav>
+
+    <main class="container" style="flex-grow: 1;">
+        
+        <div style="text-align: center; margin-top: var(--space-l);">
+            <h1 style="color: var(--warrior-red); font-size: clamp(2.5rem, 5vw, 4rem);">SECURE YOUR SPOT</h1>
+            <p style="color: var(--razr-silver); font-size: 1.2rem; margin-top: var(--space-s);">RSVP Deadline: September 1, 2026</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-timer"></div>
+        </div>
+
+        <section class="tickets" style="background: none; padding: var(--space-l) 0;">
+            <div class="ticket-grid">
+                
+                <!-- Highlighted Tier -->
+                <div class="ticket-card glass-card featured" data-reveal>
+                    <div style="background: var(--warrior-gold); color: black; font-weight: 900; padding: 0.5rem; border-radius: 12px; margin-bottom: 1rem;">FIRST 25 ALUMNI</div>
+                    <h3>EARLY DEPOSIT</h3>
+                    <div class="ticket-price" style="color: var(--warrior-red);">$25</div>
+                    <p>Lock in your rate early. Extremely limited availability.</p>
+                    <br>
+                    <a href="rsvp.html?tier=early" class="cta-button" style="width: 100%;">SELECT</a>
+                </div>
+
+                <!-- Standard Tier -->
+                <div class="ticket-card glass-card" data-reveal>
+                    <div style="opacity: 0;">SPACER</div>
+                    <h3>STANDARD DEPOSIT</h3>
+                    <div class="ticket-price">$50</div>
+                    <p>Standard RSVP deposit to secure your ticket for the reunion.</p>
+                    <br>
+                    <a href="rsvp.html?tier=standard" class="cta-button" style="width: 100%; background: var(--razr-silver); color: black; box-shadow: none;">SELECT</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="padding: var(--space-m) 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+        <p style="opacity: 0.5;">&copy; 2026 Woodlawn High School Class of 2006.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

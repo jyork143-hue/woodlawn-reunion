@@ -235,6 +235,88 @@ h1, h2, h3 {
     z-index: 100;
 }
 
+/* Forms and Flows */
+.flow-container {
+    max-width: 800px;
+    margin: var(--space-xl) auto;
+    padding: var(--space-m);
+}
+
+.input-group {
+    margin-bottom: var(--space-m);
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 700;
+    color: var(--razr-silver);
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    border-color: var(--warrior-red);
+    box-shadow: 0 0 15px var(--warrior-red-glow);
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-s);
+    margin: var(--space-m) 0;
+    flex-wrap: wrap;
+}
+
+.time-block {
+    background: var(--carbon-black-glass);
+    border: 1px solid var(--warrior-red);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.time-block span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    color: var(--warrior-gold);
+}
+
+.time-block small {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--razr-silver);
+}
+
+/* Banner */
+.promo-banner {
+    background: linear-gradient(90deg, var(--warrior-red), var(--warrior-gold));
+    color: black;
+    text-align: center;
+    padding: var(--space-s);
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 20px var(--warrior-red-glow);
+}
+
 /* Animations */
 [data-reveal] {
     opacity: 0;
