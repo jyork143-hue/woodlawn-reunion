@@ -32,7 +32,18 @@
                     <h3>EARLY DEPOSIT</h3>
                     <div class="ticket-price" style="color: var(--warrior-red);">$25</div>
                     <p>Lock in your rate early. Extremely limited availability.</p>
-                    <br>
+                    
+                    <!-- Pre-order Counter -->
+                    <div style="margin: 1rem 0; text-align: left;">
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; margin-bottom: 0.2rem;">
+                            <span>Spots Claimed</span>
+                            <span id="spots-claimed" style="color: var(--warrior-gold); font-weight: 700;">18 / 25</span>
+                        </div>
+                        <div style="width: 100%; background: rgba(255,255,255,0.1); border-radius: 50px; height: 10px; overflow: hidden;">
+                            <div id="spots-bar" style="width: 72%; height: 100%; background: var(--warrior-red); border-radius: 50px; transition: width 1s ease-in-out;"></div>
+                        </div>
+                    </div>
+
                     <a href="rsvp.html?tier=early" class="cta-button" style="width: 100%;">SELECT</a>
                 </div>
 
