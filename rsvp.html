@@ -3,72 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RSVP & Registration | Woodlawn 2006</title>
+    <title>Join Interest List – Woodlawn Reunion</title>
+    <meta name="description" content="Interest list form for the Woodlawn Class of 2006 reunion. Collect alumni information and preferences.">
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="min-height: 100vh; display: flex; flex-direction: column;">
-
-    <nav style="padding: var(--space-m); text-align: center;">
-        <a href="deposit.html" style="color: var(--razr-silver); text-decoration: none; font-weight: 700;">&larr; BACK TO DEPOSITS</a>
+<body>
+    <!-- Navigation (same as index) -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sound">The Sound</a></li>
+            <li><a href="#look">The Look</a></li>
+            <li><a href="#energy">The Energy</a></li>
+            <li><a href="rsvp.html">Interest List</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+            <li><a href="vendors.html">Vendors / Sponsors</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="cta primary" href="rsvp.html">Join the Interest List</a>
+        <button class="mobile-menu-btn">☰</button>
     </nav>
 
-    <main class="container flow-container glass-card" style="margin-top: 0;" data-reveal>
-        <div style="text-align: center; margin-bottom: var(--space-m);">
-            <h1 style="color: var(--warrior-gold);">ALUMNI RSVP</h1>
-            <p style="color: var(--razr-silver);">Complete your registration to secure your deposit.</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Join the Interest List</h1>
+            <p class="hero-subtitle">Help shape the reunion experience. Tell us how you'd like to get involved.</p>
         </div>
+    </header>
 
-        <form action="confirmation.html" method="GET">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-m);">
-                <div class="input-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" required placeholder="Jane">
-                </div>
-                <div class="input-group">
-                    <label for="lastName">Last Name (Maiden)</label>
-                    <input type="text" id="lastName" name="lastName" required placeholder="Doe">
-                </div>
+    <main class="container flow-container glass-card">
+        <h2 class="section-title">Alumni Interest Form</h2>
+        <!-- FORM ACTION PLACEHOLDER: connect to Formspree -->
+        <!-- CENTRAL EMAIL NOTIFICATION TARGET: woodlawn2006reunion@gmail.com -->
+        <form action="https://formspree.io/f/your-form-id" method="POST" id="interest-form">
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required placeholder="Jane">
             </div>
-
+            <div class="input-group">
+                <label for="lastName">Last Name (Maiden)</label>
+                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+            </div>
             <div class="input-group">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" required placeholder="jane@example.com">
             </div>
-
             <div class="input-group">
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" placeholder="(410) 555-0106">
             </div>
-
             <div class="input-group">
-                <label for="tier">Selected Tier</label>
-                <select id="tier" name="tier">
-                    <option value="early">Early Deposit ($25)</option>
-                    <option value="standard">Standard Deposit ($50)</option>
+                <label for="classYear">Class Year</label>
+                <input type="text" id="classYear" name="classYear" placeholder="2006">
+            </div>
+            <div class="input-group">
+                <label>Interested in bringing a guest?</label>
+                <select name="guestInterest" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
                 </select>
             </div>
-
-            <div style="text-align: center; margin-top: var(--space-l);">
-                <button type="submit" class="cta-button" style="width: 100%; cursor: pointer; border: none; font-size: 1.2rem;">PROCEED TO PAYMENT &rarr;</button>
+            <div class="input-group">
+                <label>Interested in volunteering?</label>
+                <select name="volunteerInterest" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                </select>
             </div>
+            <div class="input-group">
+                <label>Interested in vending or sponsoring?</label>
+                <select name="vendorInterest" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="songRequest">Song Request</label>
+                <input type="text" id="songRequest" name="songRequest" placeholder="Your favorite 2006 track...">
+            </div>
+            <div class="input-group">
+                <label for="photoInterest">Memory/Photo Submission Interest</label>
+                <select name="photoInterest" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Anything else you’d like us to know..."></textarea>
+            </div>
+            <button type="submit" class="cta-button">Submit Interest</button>
         </form>
     </main>
 
-    <footer style="padding: var(--space-m) 0; text-align: center;">
-        <p style="opacity: 0.5;">&copy; 2026 Woodlawn High School Class of 2006.</p>
-    </footer>
+    <!-- Sticky Mobile CTA -->
+    <a href="rsvp.html" class="sticky-cta">✦ Join the Interest List</a>
 
     <script src="main.js"></script>
-    <script>
-        // Auto-select tier based on URL parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const tier = urlParams.get('tier');
-        if(tier) {
-            const select = document.getElementById('tier');
-            if(select.querySelector(`option[value="${tier}"]`)) {
-                select.value = tier;
-            }
-        }
-    </script>
 </body>
 </html>

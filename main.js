@@ -1,12 +1,8 @@
-/* Main Interactivity - Woodlawn Class of 2006 */
+// Main Interactivity - Woodlawn Reunion
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Scroll Reveal Animation
-    const observerOptions = {
-        threshold: 0.1
-    };
-
+    // Scroll Reveal Animation (existing)
+    const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -14,76 +10,79 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, observerOptions);
+    document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('[data-reveal]').forEach(el => {
-        observer.observe(el);
-    });
+    // Mobile Menu Toggle
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => navLinks.classList.toggle('show'));
+    }
 
-    // Chatbot Trigger
-    const chatbot = document.getElementById('chatbot');
-    chatbot.addEventListener('click', () => {
-        alert("Alumni Chatbot: 'Welcome back, Class of 06! I'm currently syncing with the Sidekick servers... Ask me anything about the reunion soon!'");
-    });
-
-    // Smooth Scroll for Anchors
+    // Smooth Scroll for Anchor Links (already in old code, keep)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            if(targetId === "#") return;
-            const targetElement = document.querySelector(targetId);
-            if(targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+            if (targetId === '#') return;
+            const targetEl = document.querySelector(targetId);
+            if (targetEl) {
+                targetEl.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 
-    // Countdown Timer Logic
-    const targetDate = new Date("September 1, 2026 12:00:00 EDT").getTime();
-    
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
+    // FAQ Accordion
+    document.querySelectorAll('.faq-item .question').forEach(q => {
+        q.addEventListener('click', () => {
+            const item = q.parentElement;
+            item.classList.toggle('open');
+        });
+    });
 
-        if (distance < 0) {
-            document.querySelectorAll('.countdown-timer').forEach(el => {
-                el.innerHTML = "RSVP CLOSED";
-            });
-            return;
-        }
-
-        // Time calculations
-        const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30.44));
-        const weeks = Math.floor((distance % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24 * 7));
-        const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Build output string
-        const output = `
-            <div class="time-block"><span>${months}</span><small>Months</small></div>
-            <div class="time-block"><span>${weeks}</span><small>Weeks</small></div>
-            <div class="time-block"><span>${days}</span><small>Days</small></div>
-            <div class="time-block"><span>${hours}</span><small>Hours</small></div>
-            <div class="time-block"><span>${minutes}</span><small>Mins</small></div>
-            <div class="time-block"><span>${seconds}</span><small>Secs</small></div>
-        `;
-
-        document.querySelectorAll('.countdown-timer').forEach(el => {
-            el.innerHTML = output;
+    // Sticky Mobile CTA visibility on scroll
+    const stickyCTA = document.querySelector('.sticky-cta');
+    if (stickyCTA) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                stickyCTA.classList.add('visible');
+            } else {
+                stickyCTA.classList.remove('visible');
+            }
         });
     }
 
-    // Initialize and run every second
-    if (document.querySelector('.countdown-timer')) {
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+    // Form handling – redirect to confirmation with type param
+    const interestForm = document.getElementById('interest-form');
+    if (interestForm) {
+        interestForm.addEventListener('submit', e => {
+            e.preventDefault();
+            // In a real setup Formspree would handle submission. Here we simulate.
+            window.location.href = 'confirmation.html?type=interest';
+        });
+    }
+    const vendorForm = document.getElementById('vendor-form');
+    if (vendorForm) {
+        vendorForm.addEventListener('submit', e => {
+            e.preventDefault();
+            window.location.href = 'confirmation.html?type=vendor';
+        });
+    }
+    const scholarshipForm = document.getElementById('scholarship-form');
+    if (scholarshipForm) {
+        scholarshipForm.addEventListener('submit', e => {
+            e.preventDefault();
+            window.location.href = 'confirmation.html?type=scholarship';
+        });
     }
 
-    // Visual Log for Antigravity verification
-    console.log("Woodlawn 2006 Landing Page Initialized.");
-});
+    // Chatbot placeholder
+    const chatbot = document.getElementById('chatbot');
+    if (chatbot) {
+        chatbot.addEventListener('click', () => {
+            alert("Alumni Chatbot: 'Welcome back, Class of 06! I'm currently syncing with the Sidekick servers... Ask me anything about the reunion soon!'");
+        });
+    }
 
+    console.log('Woodlawn Reunion site initialized.');
+});

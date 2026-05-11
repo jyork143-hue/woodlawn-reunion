@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendors & Sponsors – Woodlawn Reunion</title>
+    <meta name="description" content="Vendor and sponsor interest form for the Woodlawn Class of 2006 reunion.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation (same as index) -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sound">The Sound</a></li>
+            <li><a href="#look">The Look</a></li>
+            <li><a href="#energy">The Energy</a></li>
+            <li><a href="rsvp.html">Interest List</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+            <li><a href="vendors.html">Vendors / Sponsors</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="cta primary" href="rsvp.html">Join the Interest List</a>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Vendors &amp; Sponsors</h1>
+            <p class="hero-subtitle">Support the reunion and showcase your business.</p>
+        </div>
+    </header>
+
+    <main class="container flow-container glass-card">
+        <h2 class="section-title">Vendor / Sponsor Interest Form</h2>
+        <!-- FORM ACTION PLACEHOLDER: connect to Formspree -->
+        <!-- CENTRAL EMAIL NOTIFICATION TARGET: woodlawn2006reunion@gmail.com -->
+        <form action="https://formspree.io/f/your-form-id" method="POST" id="vendor-form">
+            <div class="input-group">
+                <label for="businessName">Business Name</label>
+                <input type="text" id="businessName" name="businessName" required placeholder="Acme Studios">
+            </div>
+            <div class="input-group">
+                <label for="contactName">Contact Name</label>
+                <input type="text" id="contactName" name="contactName" required placeholder="Jane Doe">
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="jane@example.com">
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(410) 555‑0106">
+            </div>
+            <div class="input-group">
+                <label for="category">Service Category</label>
+                <select id="category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="food">Food &amp; Beverage</option>
+                    <option value="photography">Photography / Video</option>
+                    <option value="decor">Decor / Rentals</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="website">Website or Social Link</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com">
+            </div>
+            <div class="input-group">
+                <label for="classYear">Alumni Class Year (if applicable)</label>
+                <input type="text" id="classYear" name="classYear" placeholder="2006">
+            </div>
+            <div class="input-group">
+                <label for="sponsorshipInterest">Sponsorship Interest</label>
+                <select id="sponsorshipInterest" name="sponsorshipInterest" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="cash">Cash Sponsorship</option>
+                    <option value="in‑kind">In‑Kind Donation</option>
+                    <option value="both">Both</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Any special requirements or ideas..."></textarea>
+            </div>
+            <button type="submit" class="cta-button">Submit Interest</button>
+        </form>
+    </main>
+
+    <!-- Sticky Mobile CTA -->
+    <a href="rsvp.html" class="sticky-cta">✦ Join the Interest List</a>
+
+    <script src="main.js"></script>
+</body>
+</html>

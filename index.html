@@ -4,112 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woodlawn HS Class of 2006 | 20-Year Reunion</title>
-    <meta name="description" content="Official landing page for the Woodlawn High School Class of 2006: 20-Year Reunion. The Sound of '06 at The Gala, Woodlawn MD.">
+    <meta name="description" content="The Sound of ’06 – a Woodlawn Class of 2006 reunion experience inspired by Baltimore culture, early-2000s music, school pride, and shared memories.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Promotional Banner -->
-    <a href="deposit.html" style="text-decoration: none;">
-        <div class="promo-banner">
-            FLASH SPECIAL: Secure your spot! First 25 deposits only $25. RSVP deadline approaching! &rarr;
-        </div>
-    </a>
+    <!-- Primary Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#sound">The Sound</a></li>
+            <li><a href="#look">The Look</a></li>
+            <li><a href="#energy">The Energy</a></li>
+            <li><a href="rsvp.html">Interest List</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+            <li><a href="vendors.html">Vendors / Sponsors</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="cta primary" href="rsvp.html">Join the Interest List</a>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" id="hero">
         <div class="hero-content">
             <p class="hero-tagline">WOODLAWN HIGH SCHOOL REUNION</p>
-            <h1 class="hero-title">THE SOUND OF '06</h1>
-            <p class="hero-details">October 14, 2026 • The Gala • Woodlawn, MD</p>
-            <a href="#tickets" class="cta-button">GET TICKETS</a>
+            <h1 class="hero-title">THE SOUND OF ’06</h1>
+            <p class="hero-subtitle">A Woodlawn Class of 2006 reunion experience inspired by Baltimore culture, early‑2000s music, school pride, and shared memories.</p>
+            <a href="rsvp.html" class="cta-button">Join the Interest List</a>
         </div>
     </header>
 
     <main class="container">
-        
+        <!-- Theme Sections (Embedded) -->
+        <section id="sound" class="theme-section">
+            <h2 class="section-title" data-reveal>The Sound</h2>
+            <div class="theme-card" data-reveal>
+                <h3>R&amp;B • Hip‑hop • Crunk • Baltimore Club</h3>
+                <p>From 92Q vibes to the club beats that defined the summer of ’06.</p>
+            </div>
+        </section>
+        <section id="look" class="theme-section">
+            <h2 class="section-title" data-reveal>The Look</h2>
+            <div class="theme-card" data-reveal>
+                <h3>Throwback Casual</h3>
+                <p>Digital‑camera snapshots, Kodak film grain, chrome accents – the style of our senior year.</p>
+            </div>
+        </section>
+        <section id="energy" class="theme-section">
+            <h2 class="section-title" data-reveal>The Energy</h2>
+            <div class="theme-card" data-reveal>
+                <h3>Cookout &amp; Community</h3>
+                <p>Dancing, games, photo walls, and the pride of the Warriors coming together.</p>
+            </div>
+        </section>
+
         <!-- Experience Zones -->
-        <section class="zones">
+        <section class="zones" id="experience">
             <h2 class="section-title" data-reveal>THE EXPERIENCE</h2>
             <div class="grid">
-                <div class="zone-card" data-reveal>
+                <div class="experience-card" data-reveal>
                     <img src="assets/tech_station.png" alt="Tech Station" class="zone-img">
-                    <div class="zone-overlay">
-                        <h3>TECH STATION</h3>
-                        <p>A nostalgic dive into Razrs, Sidekicks, and the era of the click-wheel.</p>
-                    </div>
+                    <h3>Tech Nostalgia Station</h3>
+                    <p>Relive Razrs, Sidekicks, and early‑2000s gadget culture.</p>
                 </div>
-                <div class="zone-card" data-reveal>
+                <div class="experience-card" data-reveal>
                     <img src="assets/photo_booth.png" alt="360 Photo Booth" class="zone-img">
-                    <div class="zone-overlay">
-                        <h3>360 PHOTO BOOTH</h3>
-                        <p>High-energy social sharing. Capture the moment in full circle.</p>
-                    </div>
+                    <h3>360 Photo Moment</h3>
+                    <p>Capture the night in full circle – share on socials instantly.</p>
                 </div>
-                <div class="zone-card" data-reveal>
-                    <div style="background: #222; height: 100%; display: flex; align-items: center; justify-content: center; padding: 2rem; border-radius: 24px;">
-                        <div style="text-align: center;">
-                             <h3 style="color: var(--warrior-red);">MEMORY WALL</h3>
-                             <p>Drop your throwback photos and digital notes. Relive the vibes of 2006.</p>
-                        </div>
-                    </div>
+                <div class="experience-card" data-reveal>
+                    <h3>Memory Wall</h3>
+                    <p>Upload throwback photos and digital notes to relive the vibes of 2006.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Ticket Tiers -->
-        <section id="tickets" class="tickets">
-            <h2 class="section-title" data-reveal>CHOOSE YOUR TIER</h2>
-            <div class="ticket-grid">
-                <div class="ticket-card glass-card" data-reveal>
-                    <h3>ALUMNI</h3>
-                    <div class="ticket-price">$135</div>
-                    <p>Primary access. Dinner, open bar (limited), and full '06 experience.</p>
-                    <br>
-                    <a href="#" class="cta-button" style="width: 100%;">BUY NOW</a>
+                <div class="experience-card" data-reveal>
+                    <h3>Throwback Game Zone</h3>
+                    <p>Arcade classics and campus‑yard games for a nostalgic competition.</p>
                 </div>
-                <div class="ticket-card glass-card featured" data-reveal>
-                    <p style="color: var(--sidekick-blue); font-weight: 700;">MOST POPULAR</p>
-                    <h3>ALUMNI +1</h3>
-                    <div class="ticket-price">$115</div>
-                    <p>Bring a guest. Same great experience at a bundled rate.</p>
-                    <br>
-                    <a href="#" class="cta-button" style="width: 100%; background: var(--warrior-gold); box-shadow: 0 0 20px var(--warrior-gold-glow); color: black;">BUY NOW</a>
+                <div class="experience-card" data-reveal>
+                    <h3>Baltimore Club Hour</h3>
+                    <p>DJ spins the best of Baltimore Club and early‑2000s hits.</p>
                 </div>
-                <div class="ticket-card glass-card" data-reveal>
-                    <h3 style="opacity: 0.6;">LEGACY (04-08)</h3>
-                    <div class="ticket-price" style="opacity: 0.6;">$150</div>
-                    <p>Priority 3. Waitlist access for surrounding class years.</p>
-                    <br>
-                    <span style="display: block; padding: 1rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; opacity: 0.6;">WAITLISTED</span>
+                <div class="experience-card" data-reveal>
+                    <h3>Alumni Vendor Showcase</h3>
+                    <p>Connect with fellow alumni businesses – sponsorship opportunities available.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Vendor Directory -->
-        <section class="vendors glass-card" data-reveal>
-            <div class="vendor-call">
-                <h2 style="color: var(--warrior-red);">ALUMNI VENDOR CALL</h2>
-                <p>Are you a Class of '06 business owner? We want to feature your services at the reunion. Showcase your brand to the people who knew you when.</p>
-                <br>
-                <a href="#" class="cta-button">REGISTER AS VENDOR</a>
+        <!-- Vendor Preview Card -->
+        <section class="vendors-preview" id="vendors-preview">
+            <h2 class="section-title" data-reveal>VENDORS &amp; SPONSORS</h2>
+            <div class="interest-card" data-reveal>
+                <p>Are you a Class of ’06 business owner or looking to support the reunion?</p>
+                <a href="vendors.html" class="cta-button">Learn More &amp; Submit Interest</a>
             </div>
         </section>
 
-        <!-- Scholarship & Footer -->
-        <footer style="padding: var(--space-xl) 0; text-align: center;">
-            <div class="glass-card" style="max-width: 400px; margin: 0 auto var(--space-l);">
-                <h3>SCHOLARSHIP FUND</h3>
-                <p>Support the next generation of Warriors.</p>
-                <div style="background: white; width: 150px; height: 150px; margin: var(--space-m) auto; display: flex; align-items: center; justify-content: center; border-radius: 12px;">
-                    <!-- QR Placeholder -->
-                    <div style="color: black; font-weight: 900; font-size: 0.8rem;">[ QR CODE ]<br>DONATE</div>
-                </div>
+        <!-- Scholarship Fund -->
+        <section class="scholarship" id="scholarship">
+            <h2 class="section-title" data-reveal>Scholarship Fund</h2>
+            <p>Support the next generation of Warriors. Donation options will open after committee approval.</p>
+            <div class="progress-placeholder" data-reveal>
+                <span class="progress-label">Goal coming soon</span>
             </div>
-            <p style="opacity: 0.5;">&copy; 2026 Woodlawn High School Class of 2006. All rights reserved.</p>
-        </footer>
+            <div class="cta-row" data-reveal>
+                <a href="#" class="cta-button">Support Scholarship Fund</a>
+                <a href="#" class="cta-button">Become a Sponsor</a>
+                <a href="#" class="cta-button">Request ACH Instructions</a>
+            </div>
+        </section>
 
+        <!-- FAQ Accordion -->
+        <section class="faq" id="faq">
+            <h2 class="section-title" data-reveal>FAQ</h2>
+            <div class="faq-item" data-reveal>
+                <div class="question">When is the reunion?</div>
+                <div class="answer">Date to be announced after committee approval.</div>
+            </div>
+            <div class="faq-item" data-reveal>
+                <div class="question">Where will the event be held?</div>
+                <div class="answer">Venue details will be shared when finalized by the committee.</div>
+            </div>
+            <div class="faq-item" data-reveal>
+                <div class="question">When will tickets open?</div>
+                <div class="answer">Ticketing will open after pricing and payment options receive final approval.</div>
+            </div>
+            <div class="faq-item" data-reveal>
+                <div class="question">Can I bring a guest?</div>
+                <div class="answer">Guest access will depend on final capacity and committee approval.</div>
+            </div>
+            <div class="faq-item" data-reveal>
+                <div class="question">How do I submit photos?</div>
+                <div class="answer">Use the photo submission or interest form linked above.</div>
+            </div>
+            <div class="faq-item" data-reveal>
+                <div class="question">How do I become a vendor or sponsor?</div>
+                <div class="answer">Complete the vendor/sponsor interest form on the Vendors page.</div>
+            </div>
+            <div class="faq-item" data-reveal>
+                <div class="question">How will scholarship funds be handled?</div>
+                <div class="answer">Scholarship details will be shared through committee‑approved updates.</div>
+            </div>
+        </section>
     </main>
+
+    <!-- Sticky Mobile CTA -->
+    <a href="rsvp.html" class="sticky-cta">✦ Join the Interest List</a>
 
     <!-- Chatbot Placeholder -->
     <div class="chatbot-trigger" id="chatbot">
