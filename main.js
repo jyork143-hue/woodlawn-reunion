@@ -52,29 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Form handling – redirect to confirmation with type param
-    const interestForm = document.getElementById('interest-form');
-    if (interestForm) {
-        interestForm.addEventListener('submit', e => {
-            e.preventDefault();
-            // In a real setup Formspree would handle submission. Here we simulate.
-            window.location.href = 'confirmation.html?type=interest';
-        });
-    }
-    const vendorForm = document.getElementById('vendor-form');
-    if (vendorForm) {
-        vendorForm.addEventListener('submit', e => {
-            e.preventDefault();
-            window.location.href = 'confirmation.html?type=vendor';
-        });
-    }
-    const scholarshipForm = document.getElementById('scholarship-form');
-    if (scholarshipForm) {
-        scholarshipForm.addEventListener('submit', e => {
-            e.preventDefault();
-            window.location.href = 'confirmation.html?type=scholarship';
-        });
-    }
+    // Formspree now handles form submissions natively via the HTML action attributes.
 
     // Chatbot placeholder
     const chatbot = document.getElementById('chatbot');
