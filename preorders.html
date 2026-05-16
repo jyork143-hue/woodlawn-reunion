@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Orders – Woodlawn Reunion</title>
+    <meta name="description" content="Secure your spot and pre-order reunion tickets.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="branch-page">
+    <!-- Navigation -->
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#sound">The Sound</a></li>
+            <li><a href="index.html#look">The Look</a></li>
+            <li><a href="index.html#energy">The Energy</a></li>
+            <li><a href="rsvp.html">Interest List</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+            <li><a href="vendors.html">Vendors / Sponsors</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <a class="cta primary" href="preorders.html">Pre-Orders</a>
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Reunion Pre-Orders</h1>
+            <p class="hero-subtitle">Secure your ticket or make a deposit securely via Stripe.</p>
+        </div>
+    </header>
+
+    <main class="container flow-container glass-card">
+        <h2 class="section-title">Purchase Ticket Deposit</h2>
+        <p>Click the button below to be redirected to our secure Stripe checkout.</p>
+        
+        <div style="text-align: center; margin-top: var(--space-m);">
+            <button id="checkout-button" class="cta-button">Proceed to Checkout</button>
+        </div>
+        <p id="error-message" style="color: var(--warrior-red); text-align: center; margin-top: 1rem;"></p>
+    </main>
+
+    <script>
+        const checkoutButton = document.getElementById('checkout-button');
+        const errorMessage = document.getElementById('error-message');
+
+        checkoutButton.addEventListener('click', async () => {
+            checkoutButton.disabled = true;
+            checkoutButton.textContent = 'Processing...';
+            errorMessage.textContent = '';
+
+            try {
+                // In the blueprint, we first need a connected account. 
+                // For a real production app, the account creation/onboarding is done by the merchant.
+                // We're simulating the flow here for the demo.
+                
+                // 1. Create Account
+                const accountRes = await fetch('http://localhost:3000/create-account', { method: 'POST' });
+                if (!accountRes.ok) throw new Error('Failed to create account');
+                const accountData = await accountRes.json();
+                
+                // 2. Create Checkout Session on that account
+                const sessionRes = await fetch('http://localhost:3000/create-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ account_id: accountData.account_id })
+                });
+                
+                if (!sessionRes.ok) throw new Error('Failed to create checkout session');
+                const sessionData = await sessionRes.json();
+
+                // 3. Redirect to Stripe Checkout
+                window.location.href = sessionData.url;
+            } catch (err) {
+                errorMessage.textContent = err.message || 'An error occurred connecting to Stripe.';
+                checkoutButton.disabled = false;
+                checkoutButton.textContent = 'Proceed to Checkout';
+            }
+        });
+    </script>
+
+    <!-- Sticky Mobile CTA -->
+    <a href="preorders.html" class="sticky-cta">✦ Pre-Order Now</a>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -33,8 +33,7 @@
 
     <main class="container flow-container glass-card">
         <h2 class="section-title">Alumni Interest Form</h2>
-        <!-- FORM ACTION PLACEHOLDER: connect to Formspree -->
-        <!-- CENTRAL EMAIL NOTIFICATION TARGET: woodlawn2006reunion@gmail.com -->
+        <!-- FORM ACTION PLACEHOLDER: Create a Formspree account for woodlawn06commitee@gmail.com, then paste the generated Form ID below -->
         <form action="https://formspree.io/f/your-form-id" method="POST" id="interest-form">
             <div class="input-group">
                 <label for="firstName">First Name</label>
@@ -54,7 +53,14 @@
             </div>
             <div class="input-group">
                 <label for="classYear">Class Year</label>
-                <input type="text" id="classYear" name="classYear" placeholder="2006">
+                <select id="classYear" name="classYear" required>
+                    <option value="" disabled selected>Select Year</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                </select>
             </div>
             <div class="input-group">
                 <label>Interested in bringing a guest?</label>
