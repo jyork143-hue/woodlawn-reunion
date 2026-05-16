@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <meta name="description" content="Vendor and sponsor interest form for the Woodlawn Class of 2006 reunion.">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="branch-page">
     <!-- Navigation (same as index) -->
     <nav>
@@ -35,8 +37,6 @@
         <h2 class="section-title">Vendor / Sponsor Interest Form</h2>
         <!-- FORM ACTION PLACEHOLDER: Create a Formspree account for woodlawn06commitee@gmail.com, then paste the generated Form ID below -->
         <form action="https://formspree.io/f/mredzgze" method="POST" id="vendor-form">
-            <label> Your email: <input type="email" name="email"></label>
-              <label> Your message: <textarea name="message"></textarea> </label>
             <div class="input-group">
                 <label for="businessName">Business Name</label>
                 <input type="text" id="businessName" name="businessName" required placeholder="Acme Studios">
@@ -90,7 +90,8 @@
             </div>
             <div class="input-group">
                 <label for="notes">Additional Notes</label>
-                <textarea id="notes" name="notes" rows="4" placeholder="Any special requirements or ideas..."></textarea>
+                <textarea id="notes" name="notes" rows="4"
+                    placeholder="Any special requirements or ideas..."></textarea>
             </div>
             <button type="submit" class="cta-button">Submit Interest</button>
         </form>
@@ -101,4 +102,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
