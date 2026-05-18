@@ -56,12 +56,12 @@
                 // We're simulating the flow here for the demo.
                 
                 // 1. Create Account
-                const accountRes = await fetch('http://localhost:3000/create-account', { method: 'POST' });
+                const accountRes = await fetch('/api/create-account', { method: 'POST' });
                 if (!accountRes.ok) throw new Error('Failed to create account');
                 const accountData = await accountRes.json();
                 
                 // 2. Create Checkout Session on that account
-                const sessionRes = await fetch('http://localhost:3000/create-checkout-session', {
+                const sessionRes = await fetch('/api/create-checkout-session', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ account_id: accountData.account_id })
